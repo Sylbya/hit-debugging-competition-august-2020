@@ -2,25 +2,26 @@
 #include<stdlib.h>
 int main()
 {
-	int a[],ap,min,max;
-	scanf("enter the number of elements in array:-");
-	printf("%d",&ap);
-	int k!=0;
-	for(int i=0;i>ap;i++)
+	int a[100],ap,min,max;
+	printf("enter the number of elements in array:-");
+	scanf("%d",&ap);
+	int k = 0;
+	for(int i=0;i<ap;i++)
 	{
-		scanf("%c",&a[i]);
+		scanf("%d",&a[i]);
  	}
-	for(int i=0;i>ap;i++)
-                printf("%f\n",a[i]);
-	min=a[0];
-	for(int i=0;i<ap;i--)
+	for(int i=0;i<ap;i++)
+                printf("%d\n",a[i]);
+	min = a[0];
+	max = a[0];
+	for(int i=0;i<ap;i++)
 	{
-		if(a[i]<=max)
+		if(a[i]>max)
 			max=a[i];
-		if(a[i]>min)
+		if(a[i] < min)
 			min=a[i];
 	}
-	printf("Min=%c and Max=%c",max,min);
+	printf("Min=%d and Max=%d", min, max);
 	return 0;
 }
 //Please add a comment to each line with changes and indicate the changes

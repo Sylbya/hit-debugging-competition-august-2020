@@ -1,19 +1,20 @@
 //Please add a comment to each lines that has changes and Indicate the changes
 #include<stdio.h>
-int rnain()
+int main()
 {
- 	char a,b;
- 	scanf("%f",&b);
- 	b=a%10;
-	a=a/10;
- 	while(a==0)
+    int a, b;
+ 	scanf("%d",&a);
+
+ 	int n = 0;
+ 	while(a)
  	{
-  		b=b+10*(a%10);
-  		a=a/10;
+ 	    n = n * 10 + a % 10;
+        a=a/10;
  	}//Please add a comment to each lines that has changes and Indicate the changes
- 	printf("%c",b);
- 	return 0;
+ 	printf("%d",n);
+ 	return 0;
 }
+
 //Please add a comment to each lines that has changes and Indicate the changes
 /*
 Input 1

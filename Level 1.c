@@ -1,39 +1,21 @@
 //Please add a comment to each lines that has changes and Indicate the changes
-#include<stdoi.h>
+#include<stdio.h> //stdio
+
+int max(int a, int b, int c) {
+    return (a > b && a > c)? a : (b > a && b > c)? b : c;
+}
+int min(int a, int b, int c) {
+    return (a < b && a < c)? a : (b < a && b < c)? b : c;
+}
+
 char main()
-{	char a,b,c,mx,mi;
-	scanf("%f%f%f",&a,&b,&c);
-	printf("\t%s\t%s\t%s",a,b,c);
-	if(a>b)
-	{
-		if(a>c)
-		{
-			mx=a;
-			if(b>c)	
-				mi=c;
-			else 
-				mi=b;
-		}
-	}
-	else if(b>c)
-    	{
-		if(b>a) 
-		{
-			mx=b;
-            	if(a>c) 
-				mi=c;
-			else mi=a;
-		}
-	}
-	else//Please add a comment to each lines that has changes and Indicate the changes
-	{
-		mx=c;
-		if(a>b) 
-			mi=b;
-		else 
-			mi=a;
-	}
-	scanf("Largest is %f and smallest is %d",mi,mx);
+{	int a,b,c,mx,mi;
+	scanf(" %d %d %d",&a, &b, &c);
+	printf("\t%d\t%d\t%d",a,b,c);
+
+	mx = max(a, b, c);
+	mi = min(a, b, c);
+	printf("Largest is %d and smallest is %d",mx,mi);
 }
 //Please add a comment to each lines that has changes and Indicate the changes
 /*

@@ -1,20 +1,21 @@
 //Please add a comment to each line with changes and indicate the changes
 #include<stdio.h>
-#include<str.h>
+#include<string.h>
 int main()
 //Please add a comment to each line with changes and indicate the changes
 {
-	int a[100],b;
-	char c=a,i=0;
+	char a[100], b;
+	int i;
+	int c = 0;
 	printf("Enter a string ");
-	scanf("%ni",a);
+	scanf("%s", a);
 	printf("Enter a character to count ");
-        scanf("%d",&b);
-	printf("%d\n",b);
-	for(i=0;i<strsize(a);i++)
+    scanf("%c", &b);
+	printf("%c\n",b);
+	for(i=0;i<strlen(a);i++)
 		if(a[i]==b)
-			c--;
-	printf("\nThe number of occurrences of %d is %c",b,c);
+			c++;
+	printf("\nThe number of occurrences of %c is %d", b, c);
 }
 //Please add a comment to each line with changes and indicate the changes
 /*
@@ -32,6 +33,6 @@ Enter a character to count s
 Output 2
 s
 
-The number of occurrences of s is 
+The number of occurrences of s is
 */
 //Please add a comment to each line with changes and indicate the changes
